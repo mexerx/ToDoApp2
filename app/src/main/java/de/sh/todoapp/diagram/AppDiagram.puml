@@ -1,0 +1,77 @@
+@startuml
+!theme spacelab
+
+allowmixing
+
+package de.sh.todoapp {
+    class MainActivity {
+        + onCreate(savedInstanceState: Bundle?)
+    }
+
+    package ui {
+        class Dashboard {
+            + Dashboard()
+        }
+
+        class TodoScreen {
+            + TodoScreen(context: Context,
+            navController: NavHostController)
+        }
+
+        class ExpandableTodoCard {
+            + ExpandableTodoCard(todo: TodoDataClass,
+            onEditClick: () -> Unit,
+            onCompleteToggle: (TodoDataClass) -> Unit)
+        }
+
+        class EditTodoDialog {
+            + EditTodoDialog(todo: TodoDataClass?,
+            onDismiss: () -> Unit,
+            onSave: (TodoDataClass) -> Unit,
+            onDelete: (TodoDataClass) -> Unit)
+        }
+    }
+
+    package data {
+        class TodoDataClass {
+            + id: Int
+            + name: String
+            + priority: Int
+            + deadline: Long
+            + description: String
+            + is_completed: Boolean
+        }
+
+        class DbHelper {
+            + onCreate(db: SQLiteDatabase?)
+            + onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int)
+            + getReadableDatabase(): SQLiteDatabase
+            + getWritableDatabase(): SQLiteDatabase
+            - copyDatabaseFromAssets()
+        }
+
+        class Controller {
+            + insertTodo(todo: TodoDataClass): Boolean
+            + updateTodo(todo: TodoDataClass): Boolean
+            + deleteTodo(todoId: Int): Boolean
+            + getAllTodos(): List<TodoDataClass>
+        }
+    }
+}
+
+    package assets {
+
+    database todo.db
+    }
+    MainActivity --> Dashboard
+    MainActivity --> TodoScreen
+    TodoScreen --> ExpandableTodoCard
+    TodoScreen --> EditTodoDialog
+    TodoScreen --> Controller
+    ExpandableTodoCard --> TodoDataClass
+    EditTodoDialog --> TodoDataClass
+    Controller --> DbHelper
+    Controller --> TodoDataClass
+    DbHelper --> assets
+
+@enduml
