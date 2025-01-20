@@ -21,7 +21,7 @@ The app follows a simple **Model-View-Controller** (MVC) pattern:
 
 ## File Structure
 
-<img src="image.png">
+<img src="app/src/main/java/de/sh/todoapp/diagram/App.svg">
 
 ## Prerequisites
 
