@@ -1,5 +1,3 @@
-Got it! Since you're using Jetpack Compose, we can adjust the `README.md` to reflect this. Here's the updated version, taking Jetpack Compose into account.
-
 # TodoApp
 
 A simple Todo application for managing tasks using Jetpack Compose and SQLite database in Android. This app allows users to create, read, update, and delete Todo items with features like priority, deadline, and completion status.
