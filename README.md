@@ -77,11 +77,9 @@ dependencies {
     - Save the Todo item.
 
 2. **Editing a Todo:**
-    - Tap on a Todo item to edit its details.
+    - Long Tap on a Todo item to edit its details.
     - Update the Name, Priority, Deadline, Description, or Completion status.
-
-3. **Deleting a Todo:**
-    - Swipe left or right on a Todo item to delete it.
+    - or delete the Todo 
 
 ## Database Structure
 
