@@ -18,6 +18,11 @@ The app follows a simple **Model-View-Controller** (MVC) pattern:
 - **View**: Composable functions using Jetpack Compose for displaying and interacting with the Todo items.
 - **Controller**: `Controller` class manages CRUD operations (Create, Read, Update, Delete) for Todo items by interacting with the SQLite database.
 
+
+## File Structure
+
+<img src="image.png">
+
 ## Prerequisites
 
 - Android Studio (latest stable version)
