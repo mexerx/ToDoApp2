@@ -36,7 +36,7 @@ Follow these steps to set up the project on your local machine:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/todoapp.git
+git clone https://github.com/mexerx/ToDoApp2.git
 ```
 
 ### 2. Open the project in Android Studio
